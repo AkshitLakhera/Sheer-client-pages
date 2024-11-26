@@ -3,16 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Banner with Title and Icons</title>
+    <title>Banner with Title, Icons, and Text</title>
     <style>
       body {
         margin: 0;
         font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #f4f4f4;
+        background-color: #f4f4f4; /* Page background */
       }
       .banner {
         width: 100%;
@@ -22,41 +18,100 @@
         padding: 40px 20px;
       }
       .banner-title {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
+        font-weight: bolder;
+        font-size: 2.5rem; /* Adjusted font size for better wrapping */
+        margin-bottom: 50px;
+        color: black;
+        max-width: 600px; /* Limit the width to ensure wrapping */
+        margin: 0 auto 50px; /* Center the title with automatic margins */
+        line-height: 1.2; /* Adjust line height for readability */
+        word-wrap: break-word; /* Ensure long words break properly */
       }
       .icon-container {
         display: flex;
         justify-content: center;
-        gap: 20px;
+        gap: 60px; /* Spacing between icon groups */
         flex-wrap: wrap;
       }
+      .icon-wrapper {
+        text-align: center; /* Centers text below each icon */
+        max-width: 120px; /* Optional: Sets a max width for better spacing */
+      }
       .icon {
-        width: 60px;
-        height: 60px;
-        background-color: white; /* Icon background color */
-        border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
-        color: #007bff;
-        font-size: 1.5rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 120px; /* Adjusted icon container size */
+        height: 120px; /* Adjusted icon container size */
+        border: 2px solid black; /* Black circular border */
+        border-radius: 50%;
+        background-color: #ffbba3; /* Matches banner background */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        margin: 0 auto; /* Centers the icon within the wrapper */
+      }
+      .icon img {
+        max-width: 60%; /* Makes icons responsive */
+        max-height: 60%; /* Ensures proper scaling */
+      }
+      .icon-text {
+        margin-top: 10px; /* Space between icon and text */
+        font-size: 1rem;
+        color: rgb(9, 9, 9); /* Text color */
       }
     </style>
   </head>
   <body>
     <div class="banner">
-      <div class="banner-title">Welcome to Our Banner</div>
+      <div class="banner-title">DIFFERENT WAYS OF UNLOCKING METHOD</div>
       <div class="icon-container">
-        <div class="icon"><img src="Frame 1000003601.png" alt="" /></div>
-        <!-- <div class="icon"><img src="Frame 1000003602.png" alt="" /></div>
-        <div class="icon"><img src="Frame 1000003603.png" alt="" /></div>
-        <div class="icon"><img src="Frame 1000003604.png" alt="" /></div>
-        <div class="icon"><img src="Frame 1000003605.png" alt="" /></div>
-        <div class="icon"><img src="Frame 1000003606.png" alt="" /></div>
-        <div class="icon"><img src="Frame 1000003607.png" alt="" /></div>
-        <div class="icon"><img src="Frame 1000003607.png" alt="" /></div> -->
+        <div class="icon-wrapper">
+          <div class="icon">
+            <img src="Vector(3).png" alt="Icon 1" />
+          </div>
+          <div class="icon-text">Fingerprint</div>
+        </div>
+        <div class="icon-wrapper">
+          <div class="icon">
+            <img src="Group.png" alt="Icon 2" />
+          </div>
+          <div class="icon-text">Passcode</div>
+        </div>
+        <div class="icon-wrapper">
+          <div class="icon">
+            <img src="Vector.png" alt="Icon 3" />
+          </div>
+          <div class="icon-text">Otp</div>
+        </div>
+        <div class="icon-wrapper">
+          <div class="icon">
+            <img src="Group.png" alt="Icon 4" />
+          </div>
+          <div class="icon-text">24/7 Support</div>
+        </div>
+        <div class="icon-wrapper">
+          <div class="icon">
+            <img src="Vector(1).png" alt="Icon 5" />
+          </div>
+          <div class="icon-text">Face Id</div>
+        </div>
+        <div class="icon-wrapper">
+          <div class="icon">
+            <img src="Vector(2).png" alt="Icon 6" />
+          </div>
+          <div class="icon-text">App</div>
+        </div>
+        <div class="icon-wrapper">
+          <div class="icon"><img src="Group 1000003576.png"Icon 6" /></div>
+          <div class="icon-text">Amazon Alexa</div>
+        </div>
+        <div class="icon-wrapper">
+          <div class="icon"><img src="Group 1000003577.png"Icon 6" /></div>
+          <div class="icon-text">Camera with Screen</div>
+        </div>
+        <div class="icon-wrapper">
+          <div class="icon"><img src="Vector(3).png"Icon 6" /></div>
+          <div class="icon-text">Mechanical Key(s)</div>
+        </div>
       </div>
     </div>
   </body>
