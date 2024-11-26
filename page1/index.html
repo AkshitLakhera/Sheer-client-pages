@@ -3,16 +3,134 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Background Image with Text and Icons</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>What Sets Us Apart</title>
+    <style>
+      /* Reset default styles */
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Background image container */
+      .background-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      /* Background image */
+      .background-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(50%); /* Dims the background */
+        z-index: 1;
+      }
+
+      /* Text overlay */
+      .text-overlay {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        z-index: 2;
+      }
+
+      /* Underline for text overlay */
+      .text-overlay h1 {
+        position: relative;
+        display: inline-block;
+        right: 50%;
+      }
+      .text-overlay h1::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 4px;
+        background-color: #fb4806;
+        border-radius: 2px;
+      }
+
+      /* Icons container */
+      .icons-container {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 25%;
+        left: 30%;
+        transform: translateX(-50%);
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 4rem;
+      }
+
+      .icon-row {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 20px;
+        margin-top: 2rem;
+      }
+
+      /* Icon border container */
+      .icon-border {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px; /* Circle size */
+        height: 100px;
+        border: 4px solid white; /* Circular border */
+        border-radius: 50%;
+        box-sizing: border-box;
+      }
+
+      /* Icon image */
+      .icon img {
+        max-width: 70%;
+        height: auto;
+        object-fit: contain; /* Maintains original icon shape */
+      }
+
+      /* Icon description */
+      .para {
+        text-align: center;
+        color: white;
+        font-size: 0.9rem;
+        margin-top: 10px;
+        font-weight: bold;
+        width: 60%;
+      }
+    </style>
   </head>
   <body>
     <div class="background-container">
+      <!-- Background image -->
       <img
         src="d5 copy 2.png"
         alt="Background Image"
         class="background-image"
       />
+
       <!-- Text overlay -->
       <div class="main-container">
         <div class="text-overlay">
