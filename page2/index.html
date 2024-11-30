@@ -4,119 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Two Column Layout</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        display: flex;
-        height: 100vh;
-      }
-      .container {
-        display: flex;
-        width: 100%;
-        background-color: #d9d9d9;
-      }
-      .image-section {
-        width: 50%;
-        background: url("your-image-url.jpg") no-repeat center center/cover;
-      }
-      .text-section {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        padding: 20px;
-        text-align: center;
-        margin-left: 3rem;
-      }
-      .text-section h1 {
-        font-size: 2rem;
-        margin-bottom: 10px;
-        text-align: left;
-        width: 60%;
-      }
-      .text-section p.small-para {
-        font-size: 1.2rem;
-        margin-bottom: 20px;
-        text-align: left;
-      }
-      .orange-line {
-        width: 100px;
-        height: 4px;
-        background-color: orange;
-        margin: 20px 0;
-        text-align: left;
-      }
-      .feature {
-        display: flex;
-        align-items: flex-start;
-        margin-bottom: 15px;
-        text-align: left;
-        width: 100%;
-        /* margin-top: 8px; */
-      }
-      .feature img {
-        width: 35px;
-        height: 35px;
-        margin-right: 10px;
-        margin-top: 0.5rem;
-      }
-      .feature-content {
-        flex: 1;
-      }
-      .feature-content h3 {
-        font-size: 2.5rem;
-        margin: 0 0 5px 0;
-      }
-      .feature-content p {
-        font-size: 0.9rem;
-        margin-top: 1rem;
-        font-weight: bold;
-        width: 70%;
-      }
-      /* Responsive Design */
-      @media (max-width: 768px) {
-        .container {
-          flex-direction: column;
-        }
-
-        .image-section {
-          width: 100%;
-          height: 50vh;
-          background-size: cover;
-        }
-
-        .text-section {
-          width: 100%;
-          padding: 15px;
-        }
-
-        .text-section h1 {
-          font-size: 1.8rem;
-        }
-
-        .text-section p.small-para {
-          font-size: 1rem;
-        }
-
-        .feature img {
-          width: 20px;
-          height: 20px;
-        }
-
-        .feature-content h3 {
-          font-size: 1.2rem;
-        }
-
-        .feature-content p {
-          font-size: 0.9rem;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="text-section">
+    <div class="container--main">
+      <div class="text-section--main">
         <h1 class="heading">CONTROL FROM ANYWHERE, ANYTIME</h1>
         <p class="small-para">Protecting All Your Value Seamlessly.</p>
         <div class="orange-line"></div>
@@ -151,7 +43,7 @@
           </div>
         </div>
       </div>
-      <div class="image-section">
+      <div class="image-section--main">
         <img
           src="Premium Photo _ Mock up, mockup_man hand holding the black smartphone with frame less blank screen 1.png"
           alt=""

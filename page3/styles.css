@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+.banner {
+  width: 100%;
+  background-color: #ffbba3;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+.banner-title {
+  font-weight: bolder;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: black;
+  max-width: 600px;
+  margin: 0 auto 50px;
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+.icon-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+.icon-wrapper {
+  text-align: center;
+  max-width: 120px;
+}
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  border: 2px solid black;
+  border-radius: 50%;
+  background-color: #ffbba3;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+.icon img {
+  max-width: 60%;
+  max-height: 60%;
+}
+.icon-text {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: rgb(9, 9, 9);
+}

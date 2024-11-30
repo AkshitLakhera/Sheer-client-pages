@@ -1,0 +1,127 @@
+/* Base Styles */
+.top_container {
+  padding: 1rem;
+  overflow-x: hidden;
+}
+
+.grid_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.sub_image {
+  padding: 0.5rem;
+  border-radius: 6rem;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Overlay Styles */
+.overlay1,
+.overaly2,
+.overaly3,
+.overaly4,
+.parent_overlay {
+  position: absolute;
+  color: white;
+  padding: 5px;
+  font-size: 2.1rem;
+  width: 35%;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.overlay1 {
+  top: 106px;
+  right: 30px;
+}
+
+.overaly2 {
+  top: 0;
+  right: 170px;
+  margin-top: 1rem;
+}
+
+.overaly3 {
+  top: 150px;
+  right: 200px;
+  margin-top: 1rem;
+}
+
+.overaly4 {
+  top: 106px;
+  margin-top: 1rem;
+}
+
+.parent_overlay {
+  display: flex;
+  top: 130px;
+  gap: 60rem;
+}
+
+.overaly6 {
+  margin-left: 20px;
+}
+
+.overaly7 {
+  margin-right: 20px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .grid_container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sub_image {
+    border-radius: 3rem; /* Reduced border radius */
+    width: 90%; /* Adjust width for smaller devices */
+    max-width: 400px;
+  }
+
+  .overlay1,
+  .overaly2,
+  .overaly3,
+  .overaly4,
+  .parent_overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    font-size: 1.2rem;
+    text-align: center;
+    z-index: 10;
+  }
+
+  .parent_overlay {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .overaly6,
+  .overaly7 {
+    margin: 0;
+  }
+}
+
+/* Additional Small Device Adjustments */
+@media screen and (max-width: 480px) {
+  .sub_image {
+    border-radius: 2rem;
+    width: 100%;
+  }
+
+  .overlay1,
+  .overaly2,
+  .overaly3,
+  .overaly4,
+  .parent_overlay {
+    font-size: 1rem;
+  }
+}

@@ -5,58 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>What Sets Us Apart</title>
     <style>
-      /* Reset default styles */
       html,
       body {
         margin: 0;
         padding: 0;
         height: 100%;
         width: 100%;
-        overflow: hidden;
+        overflow-x: hidden;
         font-family: Arial, sans-serif;
       }
 
-      /* Background image container */
-      .background-container {
+      .apart-background-container {
         position: relative;
         width: 100%;
-        height: 100%;
+        height: 100vh;
       }
 
-      /* Background image */
-      .background-image {
+      .apart-background-image {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
-        filter: brightness(50%); /* Dims the background */
+        filter: brightness(40%);
         z-index: 1;
       }
 
-      /* Text overlay */
-      .text-overlay {
+      .apart-main-container {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+      }
+
+      .apart-text-overlay {
         display: flex;
         justify-content: center;
-        position: absolute;
+        position: relative;
         top: 10%;
-        left: 50%;
-        transform: translateX(-50%);
         text-align: center;
         color: white;
         font-size: 2rem;
         font-weight: bold;
-        z-index: 2;
       }
 
-      /* Underline for text overlay */
-      .text-overlay h1 {
+      .apart-text-overlay h1 {
         position: relative;
         display: inline-block;
-        right: 50%;
+        font-size: 2rem;
       }
-      .text-overlay h1::after {
+
+      .apart-text-overlay h1::after {
         content: "";
         position: absolute;
         bottom: -10px;
@@ -68,124 +68,146 @@
         border-radius: 2px;
       }
 
-      /* Icons container */
-      .icons-container {
+      .apart-icons-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 20%;
+        width: 100%;
+        gap: 2rem;
+      }
+
+      .apart-icon-row {
         display: flex;
         justify-content: center;
-        position: absolute;
-        top: 25%;
-        left: 30%;
-        transform: translateX(-50%);
-        z-index: 2;
+        gap: 4rem; /* Increased gap to spread icons */
+        width: 100%;
+        max-width: 1200px; /* Added max-width to control overall container */
+        padding: 0 2rem; /* Added padding for responsive design */
+      }
+
+      .apart-icon {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
-        margin-top: 4rem;
+        width: 150px; /* Fixed width for consistent layout */
+        text-align: center;
       }
 
-      .icon-row {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        margin-bottom: 20px;
-        margin-top: 2rem;
-      }
-
-      /* Icon border container */
-      .icon-border {
+      .apart-icon-border {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100px; /* Circle size */
-        height: 100px;
-        border: 4px solid white; /* Circular border */
+        width: 70px;
+        height: 70px;
+        border: 2px solid white;
         border-radius: 50%;
         box-sizing: border-box;
+        padding: 0.8rem;
+        margin-bottom: 10px;
       }
 
-      /* Icon image */
-      .icon img {
+      .apart-icon img {
         max-width: 70%;
         height: auto;
-        object-fit: contain; /* Maintains original icon shape */
+        object-fit: contain;
       }
 
-      /* Icon description */
-      .para {
+      .apart-para {
         text-align: center;
         color: white;
         font-size: 0.9rem;
-        margin-top: 10px;
         font-weight: bold;
-        width: 60%;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      /* Responsive Design */
+      @media screen and (max-width: 1200px) {
+        .apart-icon-row {
+          gap: 3rem;
+          flex-wrap: wrap;
+        }
+
+        .apart-icon {
+          margin-bottom: 1rem;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .apart-icon-row {
+          flex-direction: column;
+          align-items: center;
+          gap: 2rem;
+        }
+
+        .apart-text-overlay h1 {
+          font-size: 1.5rem;
+        }
       }
     </style>
   </head>
   <body>
-    <div class="background-container">
-      <!-- Background image -->
+    <div class="apart-background-container">
       <img
         src="d5 copy 2.png"
         alt="Background Image"
-        class="background-image"
+        class="apart-background-image"
       />
 
-      <!-- Text overlay -->
-      <div class="main-container">
-        <div class="text-overlay">
+      <div class="apart-main-container">
+        <div class="apart-text-overlay">
           <h1>What Sets Us Apart</h1>
         </div>
 
-        <!-- Icons Container -->
-        <div class="icons-container">
-          <!-- Row 1: 4 icons -->
-          <div class="icon-row">
-            <div class="icon">
-              <div class="icon-border">
+        <div class="apart-icons-container">
+          <div class="apart-icon-row">
+            <div class="apart-icon">
+              <div class="apart-icon-border">
                 <img src="Vector.png" alt="Icon 6" />
               </div>
-              <p class="para">Warranty Coverage 1-3 years</p>
+              <p class="apart-para">Warranty Coverage 1-3 years</p>
             </div>
-            <div class="icon">
-              <div class="icon-border">
+            <div class="apart-icon">
+              <div class="apart-icon-border">
                 <img src="Group.png" alt="Icon 7" />
               </div>
-              <p class="para">Remote Control Access</p>
+              <p class="apart-para">Remote Control Access</p>
             </div>
-            <div class="icon">
-              <div class="icon-border">
+            <div class="apart-icon">
+              <div class="apart-icon-border">
                 <img src="Group 1000003563.png" alt="Icon 1" />
               </div>
-              <p class="para">Built in Wi-fi</p>
+              <p class="apart-para">Built in Wi-fi</p>
             </div>
-            <div class="icon">
-              <div class="icon-border">
+            <div class="apart-icon">
+              <div class="apart-icon-border">
                 <img src="Group 1000003573.png" alt="Icon 2" />
               </div>
-              <p class="para">User-Friendly Installation</p>
+              <p class="apart-para">User-Friendly Installation</p>
             </div>
           </div>
 
-          <!-- Row 2: 3 icons -->
-          <div class="icon-row">
-            <div class="icon">
-              <div class="icon-border">
+          <div class="apart-icon-row">
+            <div class="apart-icon">
+              <div class="apart-icon-border">
                 <img src="Group(1).png" alt="Icon 3" />
               </div>
-              <p class="para">Tamper-Proof Security</p>
+              <p class="apart-para">Tamper-Proof Security</p>
             </div>
-            <div class="icon">
-              <div class="icon-border">
+            <div class="apart-icon">
+              <div class="apart-icon-border">
                 <img src="Group(2).png" alt="Icon 4" />
               </div>
-              <p class="para">Premium Quality & Craftsmanship</p>
+              <p class="apart-para">Premium Quality & Craftsmanship</p>
             </div>
-            <div class="icon">
-              <div class="icon-border">
+            <div class="apart-icon">
+              <div class="apart-icon-border">
                 <img src="Vector(1).png" alt="Icon 5" />
               </div>
-              <p class="para">High Efficiency Battery Life</p>
+              <p class="apart-para">High Efficiency Battery Life</p>
             </div>
           </div>
         </div>

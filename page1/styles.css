@@ -1,0 +1,116 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Background image container */
+.apart-background-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Background image */
+.apart-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(40%); /* Dims the background */
+  z-index: 1;
+}
+
+/* Text overlay */
+.apart-text-overlay {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  z-index: 2;
+}
+
+/* Underline for text overlay */
+.apart-text-overlay h1 {
+  position: relative;
+  display: inline-block;
+  right: 90%;
+  font-size: 2rem;
+}
+.apart-text-overlay h1::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 4px;
+  background-color: #fb4806;
+  border-radius: 2px;
+}
+
+/* Icons container */
+.apart-icons-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.apart-icon-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 20px;
+  margin-top: 1rem;
+}
+
+/* Icon border container */
+.apart-icon-border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px; /* Circle size */
+  height: 70px;
+  border: 2px solid white; /* Circular border */
+  border-radius: 50%;
+  box-sizing: border-box;
+  padding: 0.8rem;
+}
+
+/* Icon image */
+.apart-icon img {
+  max-width: 70%;
+  height: auto;
+  object-fit: contain; /* Maintains original icon shape */
+}
+
+/* Icon description */
+.apart-para {
+  text-align: left;
+  color: white;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  font-weight: bold;
+  width: 60%;
+}

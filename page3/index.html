@@ -4,61 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Banner with Title, Icons, and Text</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4; /* Page background */
-      }
-      .banner {
-        width: 100%;
-        background-color: #ffbba3; /* Banner background color */
-        color: white;
-        text-align: center;
-        padding: 40px 20px;
-      }
-      .banner-title {
-        font-weight: bolder;
-        font-size: 2.5rem; /* Adjusted font size for better wrapping */
-        margin-bottom: 50px;
-        color: black;
-        max-width: 600px; /* Limit the width to ensure wrapping */
-        margin: 0 auto 50px; /* Center the title with automatic margins */
-        line-height: 1.2; /* Adjust line height for readability */
-        word-wrap: break-word; /* Ensure long words break properly */
-      }
-      .icon-container {
-        display: flex;
-        justify-content: center;
-        gap: 60px; /* Spacing between icon groups */
-        flex-wrap: wrap;
-      }
-      .icon-wrapper {
-        text-align: center; /* Centers text below each icon */
-        max-width: 120px; /* Optional: Sets a max width for better spacing */
-      }
-      .icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 120px; /* Adjusted icon container size */
-        height: 120px; /* Adjusted icon container size */
-        border: 2px solid black; /* Black circular border */
-        border-radius: 50%;
-        background-color: #ffbba3; /* Matches banner background */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-        margin: 0 auto; /* Centers the icon within the wrapper */
-      }
-      .icon img {
-        max-width: 60%; /* Makes icons responsive */
-        max-height: 60%; /* Ensures proper scaling */
-      }
-      .icon-text {
-        margin-top: 10px; /* Space between icon and text */
-        font-size: 1rem;
-        color: rgb(9, 9, 9); /* Text color */
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="banner">

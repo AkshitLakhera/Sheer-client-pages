@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Product Accordion</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .ckasshininaide-accordion {
+        width: 90%; /* Increased width */
+        max-width: 1200px;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .ckasshininaide-accordion-item {
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      .ckasshininaide-accordion-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        cursor: pointer;
+        background-color: #f9f9f9;
+        transition: background-color 0.3s;
+      }
+
+      .ckasshininaide-accordion-header:hover {
+        background-color: #f0f0f0;
+      }
+
+      .ckasshininaide-accordion-header h2 {
+        margin: 0;
+        font-size: 35px;
+        color: #000000;
+      }
+
+      .ckasshininaide-accordion-icon {
+        color: orange;
+        transition: transform 0.3s;
+      }
+
+      .ckasshininaide-accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        background-color: white;
+        padding: 0 20px;
+      }
+
+      .ckasshininaide-accordion-content.active {
+        max-height: 600px; /* Adjusted height for better visibility */
+        transition: max-height 0.5s ease-in;
+      }
+
+      .ckasshininaide-content-grid {
+        display: grid;
+        grid-template-columns: 3fr 2fr; /* 60% for Product Features, 40% for Access Modes */
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .ckasshininaide-content-column {
+        background-color: #f8f8f8;
+        border-radius: 10px;
+        padding: 15px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; /* Text will now hide and show ellipsis */
+      }
+
+      .ckasshininaide-content-column h3 {
+        margin-bottom: 10px;
+        color: #fb4806;
+        font-size: 40px;
+        font-weight: bold;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .ckasshininaide-li-styles {
+        display: flex;
+        padding: 5px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ckasshininaide-accordion">
+      <div class="ckasshininaide-accordion-item">
+        <div
+          class="ckasshininaide-accordion-header"
+          onclick="toggleAccordion(this)"
+        >
+          <h2>Specification</h2>
+          <div class="ckasshininaide-accordion-icon">+</div>
+        </div>
+        <div class="ckasshininaide-accordion-content">
+          <div class="ckasshininaide-content-grid">
+            <div class="ckasshininaide-content-column">
+              <h3>Product Features</h3>
+              <ul>
+                <div class="ckasshininaide-li-styles">
+                  <li><strong>Performance</strong></li>
+                  <span>: (W)385mm X (H)46mm</span>
+                </div>
+                <div class="ckasshininaide-li-styles">
+                  <li><strong>Size</strong></li>
+                  <span>: Large</span>
+                </div>
+                <div class="ckasshininaide-li-styles">
+                  <li><strong>Weight</strong></li>
+                  <span>: 4kg</span>
+                </div>
+                <div class="ckasshininaide-li-styles">
+                  <li><strong>Battery Life</strong></li>
+                  <span>: 4-5 months rechargeable</span>
+                </div>
+                <div class="ckasshininaide-li-styles">
+                  <li><strong>Camera</strong></li>
+                  <span
+                    >: Definition screen with built-in 360-degree camera</span
+                  >
+                </div>
+                <div class="ckasshininaide-li-styles">
+                  <li><strong>Advanced Security</strong></li>
+                  <span>: Anti-counterfeit technology integrated</span>
+                </div>
+                <div class="ckasshininaide-li-styles">
+                  <li><strong>Auto lock feature</strong></li>
+                  <span
+                    >: Eliminates the risk of accidental door unlocking</span
+                  >
+                </div>
+              </ul>
+            </div>
+            <div class="ckasshininaide-content-column">
+              <h3>Access Modes</h3>
+              <ul>
+                <li>Fingerprint</li>
+                <li>Passcode</li>
+                <li>OTP</li>
+                <li>Face Recognition</li>
+                <li>Manual Override Key</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleAccordion(header) {
+        const accordionItem = header.parentElement;
+        const content = header.nextElementSibling;
+        const icon = header.querySelector(".ckasshininaide-accordion-icon");
+
+        // Close all other open accordions
+        document
+          .querySelectorAll(".ckasshininaide-accordion-content")
+          .forEach((item) => {
+            if (item !== content) {
+              item.classList.remove("active");
+              item.previousElementSibling.querySelector(
+                ".ckasshininaide-accordion-icon"
+              ).textContent = "+";
+            }
+          });
+
+        // Toggle current accordion
+        content.classList.toggle("active");
+        icon.textContent = content.classList.contains("active") ? "-" : "+";
+      }
+    </script>
+  </body>
+</html>
+
+<!-- <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <h2>Return Policy</h2>
+          <div class="accordion-icon">+</div>
+        </div>
+        <div class="accordion-content return-policy-grid">
+          <div class="content-column">
+            <h3>Standard Return</h3>
+            <p>14-day return window with full refund</p>
+          </div>
+          <div class="content-column">
+            <h3>Condition Requirements</h3>
+            <p>Item must be unused and in original packaging</p>
+          </div>
+        </div>
+      </div> -->
